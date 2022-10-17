@@ -37,63 +37,13 @@ if a == 0:
         if d == 0:
             a, b, c, d = min(b, c), a, d, max(b, c)
         else:
-            if d != max(d, b, c) and d != min(d, b, c):
-                a, b, c, d = min(b, c, d), a, d, max(d, b, c)
-            elif b != max(d, b, c) and b != min(d, b, c):
-                a, b, c, d = min(b, c, d), a, b, max(d, b, c)
-            elif c != max(d, b, c) and c != min(d, b, c):
-                a, b, c, d = min(b, c, d), a, c, max(d, b, c)
+            if b > c:
+                b, c = c, b
+            if c > d:
+                c, d = d, c
+            if b > d:
+                b, d = d, b
+            a, b, c, d = b, a, c, d
 else:
     a, b, c, d = a, b, c, d
-
-
-
-
-
-
-
-# if a == 0:
-#     m = min(b, c, d)
-#     a = m
-# if b == 0:
-#     m = min(a, c, d)
-#     b = m
-# if c == 0:
-#     m = min(b, a, d)
-#     c = m
-# if d == 0:
-#     m = min(b, c, a)
-#     d = m
 print(str(a) + str(b) + str(c) + str(d))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
